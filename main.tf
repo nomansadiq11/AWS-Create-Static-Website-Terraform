@@ -1,7 +1,7 @@
 
 
 resource "aws_s3_bucket" "teststaticwebsite" {
-  bucket = "nomansadiq11"
+  bucket = "${var.BucketName}"
   acl    = "public-read"
   policy = "${file("policy.json")}"
 
